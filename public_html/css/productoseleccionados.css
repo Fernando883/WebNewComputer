@@ -9,7 +9,7 @@ and open the template in the editor.
 */
 
 
-#Titulo{
+#titulo{
     text-align: center;
     color:red;
     font-weight: bold;
@@ -67,3 +67,32 @@ transform: scale(1.25,1.25);
 #datos ul li{
     list-style: none;
 }
+
+h4{
+    width: 22%;
+         
+}
+
+#oferta{
+    border: 1px black solid;
+    margin-left: 30px; 
+}
+
+.centrado{
+    text-align: center;    
+}
+
+ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+.negrita{
+    font-weight: bold;
+}
+
+#comprar{
+    border: 1px black solid;
+    float: right;
+}
+
