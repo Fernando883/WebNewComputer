@@ -13,6 +13,7 @@ and open the template in the editor.
     text-align: center;
     color:red;
     font-weight: bold;
+    margin-top: 80px;
 }
 
 #importante{
@@ -75,12 +76,9 @@ h4{
 
 #oferta{
     border: 1px black solid;
-    margin-left: 0px;
+    float:right;
 }
 
-.centrado{
-    text-align: center;    
-}
 
 ul{
     padding: 0px;
@@ -96,3 +94,10 @@ ul{
     float: right;
 }
 
+.tamano{
+    font-size: 2em;
+}
+
+#precio{
+    margin-top: 20px;
+}
