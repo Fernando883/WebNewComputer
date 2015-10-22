@@ -1,0 +1,69 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 21-oct-2015, 13:25:33
+    Author     : FERNANDO
+*/
+
+
+#Titulo{
+    text-align: center;
+    color:red;
+    font-weight: bold;
+}
+
+#importante{
+    height: 300px;
+}
+
+#imagenes{
+    border: 1px black solid;
+    border-radius: 5px;
+    text-align: center;
+    
+}
+
+figure{
+transform: scale(1.5,1.5);
+-webkit-transform: scale(1,1);
+-moz-transform: scale(1,1);
+-o-transform: scale(1,1);
+-ms-transform: scale(1,1);
+transition: transform 1s;
+-webkit-transition: scale(1,1);
+-moz-transition: scale(1,1);
+-o-transition: scale(1,1);
+-ms-transition: scale(1,1);
+}
+
+figure:hover{
+transform: scale(1.25,1.25);
+-webkit-transform: scale(1.25,1.25);
+-moz-transform: scale(1.25,1.25);
+-o-transform: scale(1.25,1.25);
+-ms-transform: scale(1.25,1.25);
+}
+
+#cont{
+    border: 1px black solid;
+    height: 300px;
+    background: #f8f7f4;
+}
+
+#datos{
+    background: #f8f7f4;
+    height: 292px;
+    border-radius: 5px;
+    border: 1px black solid;
+}
+
+#compra{
+    background: orange;
+}
+
+#datos ul li{
+    list-style: none;
+}
