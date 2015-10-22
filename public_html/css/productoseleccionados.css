@@ -55,9 +55,6 @@ transform: scale(1.25,1.25);
     border: 1px black solid;
 }
 
-#compra{
-    background: orange;
-}
 
 #datos ul li{
     list-style: none;
