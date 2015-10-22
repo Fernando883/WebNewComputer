@@ -19,8 +19,16 @@
     margin-bottom: 20px;
 }
 
+#texto-negrita{
+    margin:30px;
+    text-align:center;
+}
 
-
+footer{
+    
+    margin-left: 10px;
+    padding-left: 20px;
+}
 
 
 
