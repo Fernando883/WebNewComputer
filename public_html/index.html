@@ -22,12 +22,13 @@
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script type="text/javascript" src="js/vendor/jquery-1.11.2.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -44,24 +45,27 @@
                   <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Productos <span class="caret"></span></a>
                       <ul class="dropdown-menu">
-                          <li><a href="#">Portátiles</a></li>
-                          <li><a href="#">Smartphones</a></li>
-                          <li><a href="#">Tablets</a></li>
-                          <li><a href="#">Consolas</a></li>
+                          <li><a href="ProductoX.html">Portátiles</a></li>
+                          <li><a href="ProductoX.html">Smartphones</a></li>
+                          <li><a href="ProductoX.html">Tablets</a></li>
+                          <li><a href="ProductoX.html">Consolas</a></li>
                       </ul>
                   </li>
-                 <li><a href="#">¿Dónde estamos?</a></li>
+                 <li><a href="dondeEstamos.html">¿Dónde estamos?</a></li>
                  <li><a href="formulario.html">Trabaja con nosotros</a></li>
               </ul>
           </div>   
          </div>        
-    </nav>
+    </nav>   
+    
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
+          <img id="foto" src="img/mac.jpg" >
         <h1>Bienvenidos a New Computer</h1>
         <p> La web donde encontrarás tus productos informáticos al mejor precio.</p>
+        
       </div>
     </div>
 
@@ -141,5 +145,7 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
+        
+        
     </body>
 </html>
