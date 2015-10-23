@@ -93,4 +93,10 @@ ul{
     border: 1px black solid;
     height: 300px;
     background: #f8f7f4;
+    margin-bottom: 50px;
+}
+
+footer{
+    width: 100%;
+    float: left;
 }
