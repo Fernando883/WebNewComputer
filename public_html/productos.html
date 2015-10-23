@@ -17,6 +17,8 @@ and open the template in the editor.
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         <script src="js/vendor/jquery-1.11.2.js" type="text/javascript"></script>
+        <script src="js/functions.js" type="text/javascript"></script>
+        <script src="js/main.js" type="text/javascript"></script>
         <link href="css/productoseleccionados.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
@@ -36,28 +38,28 @@ and open the template in the editor.
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 
-                <h2 id="titulo" class="titulodescripcion">MSI GE70 2QE-847XES i7-4720HQ/8GB/1TB/GTX 960M/17.3"</h2><br>
+                <h2 id="titulo" class="titulodescripcion"></h2><br>
                 <section>
                     <div id="importante">
                         <div id="imagenes" class="col-md-5">
                             <figure>
-				<img div="imagen" class="imagenes"  src="http://thumbsfotos.pccomponentes.com/asus_zenpad_c_7_0_7__negro_290_290.jpg" alt=""/>
+				<img id="imagen" class="imagenes" style="max-width: 330px; max-height: 330px" src="" alt=""/>
                             </figure>   
                         </div>
                         <div id="datos" class="col-md-offset-1 col-md-6">
                             <div class="col-md-7">
-                                <h4 class="negrita">Comprar: </h4><div class="titulodescripcion">MSI GE70 2QE-847XES i7-4720HQ/8GB/1TB/GTX 960M/17.3"</div>  
+                                <h4 class="negrita">Comprar: </h4><div class="titulodescripcion"></div>  
                             </div>
                             <div class="col-md-5">
-                                <h2><span  id="oferta" class ="label label-warning">OFERTA</span></h2>
+                                <h2><span id="oferta" class ="label label-warning" style="display: none">OFERTA</span></h2>
                             </div>
                             <ul style="margin-top: 80px">
-                                <li class="col-md-8" id="precio"><span class="tamano">PRECIO: 999 €</span></li>
+                                <li class="col-md-8"><span class="tamano" id="precio"></span></li>
                                 <li class="col-md-4"><h1><button type = "button"  id="comprar" class="btn btn-danger btn-lg">COMPRAR</button></h1></li>
                             </ul>                                
                             <p style="margin-top: 170px"><label>Desea una garantía por rotura y daño accidental de 1 año por 25,00 €</label></p>
-                            <p><input type="radio" name="repite" value="opcion1">No deseo garantía adicional</input></p>
-                            <input type="radio" name="repite" value="opcion2">Garantía por rotura y daño accidental 1 año</input><br><br>
+                            <p><input type="radio" name="repite" value="opcion1" /> No deseo garantía adicional</p>
+                            <input type="radio" name="repite" value="opcion2" /> Garantía por rotura y daño accidental 1 año<br /><br />
                                 
                         </div>
                     </div><br><br>

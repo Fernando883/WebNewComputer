@@ -24,6 +24,9 @@ and open the template in the editor.
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="js/vendor/jquery-1.11.2.js" type="text/javascript"></script>
+        <script src="js/functions.js" type="text/javascript"></script>
+        <script src="js/main.js" type="text/javascript"></script>
     </head>
     <body>
         
@@ -42,12 +45,12 @@ and open the template in the editor.
           <div class="navbar-header">
               <ul class="nav navbar-nav">
                   <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Productos <span class="caret"></span></a>
+                      <a href="ProductoX.html?type=portatil" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Productos <span class="caret"></span></a>
                       <ul class="dropdown-menu">
-                          <li><a href="ProductoX.html">Portátiles</a></li>
-                          <li><a href="ProductoX.html">Smartphones</a></li>
-                          <li><a href="ProductoX.html">Tablets</a></li>
-                          <li><a href="ProductoX.html">Consolas</a></li>
+                          <li><a href="ProductoX.html?type=portatil">Portátiles</a></li>
+                          <li><a href="ProductoX.html?type=movil">Smartphones</a></li>
+                          <li><a href="ProductoX.html?type=tablet">Tablets</a></li>
+                          <li><a href="ProductoX.html?type=consola">Consolas</a></li>
                       </ul>
                   </li>
                  <li><a href="dondeEstamos.html">¿Dónde estamos?</a></li>
@@ -62,51 +65,9 @@ and open the template in the editor.
         
     <div class="container">
       <!-- Example row of columns -->
-      <h5 id="producto">ProductoX</h5>
-      
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail">
-                <img src="..." alt="...">
-                <div class="caption">
-                    <h3>Thumbnail</h3>
-                    <p>asndaskda</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Ver</a></p>
-                </div>
-            </div> 
-        </div>
-          <div class="col-sm-6 col-md-4">
-            <div class="thumbnail">
-                <img src="..." alt="...">
-                <div class="caption">
-                    <h3>Thumbnail</h3>
-                    <p>asndaskda</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Ver</a></p>
-                </div>
-            </div> 
-        </div>
-          <div class="col-sm-6 col-md-4">
-            <div class="thumbnail">
-                <img src="..." alt="...">
-                <div class="caption">
-                    <h3>Thumbnail</h3>
-                    <p>asndaskda</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Ver</a></p>
-                </div>
-            </div> 
-        </div>
-     
-      
-      
-      
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail">
-                <img src="..." alt="...">
-                <div class="caption">
-                    <h3>Thumbnail</h3>
-                    <p>asndaskda</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Ver</a></p>
-                </div>
-            </div> 
+      <h1 id="name">ProductoX</h1>
+      <div id="contenedorProductos">
+            
         </div>
     </div>     
         
@@ -122,8 +83,6 @@ and open the template in the editor.
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
-
-        <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
