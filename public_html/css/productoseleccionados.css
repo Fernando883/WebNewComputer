@@ -95,3 +95,11 @@ ul{
     background: #f8f7f4;
     padding: 15px;
 }
+
+.badge-notify{
+   position:relative;
+   top: -230px;
+   font-size: 2em;
+   left: 230px;
+   background-color: #337ab7;
+}

@@ -21,8 +21,9 @@ $( document ).ready(function() {
                         
                         $.each(tipoDatos[0].datos, function(index, value) {
                             $('#name').html(tipoDatos[0].name);
+                            $('head title').html(tipoDatos[0].name);
                             // Agregamos los productos de un determinado tipo
-                            contenedor.append("<div class='col-sm-6 col-md-4'><div class='thumbnail'><img src='bd/"+ tipoProd +"/"+tipoDatos[0].datos[index].imagen+"' alt=''><div class='caption'>\n\
+                            contenedor.append("<div class='col-sm-6 col-md-4'><div class='thumbnail'><img src='bd/"+ tipoProd +"/"+tipoDatos[0].datos[index].imagen+"' alt=''><span class='badge badge-notify'>"+tipoDatos[0].datos[index].precio+"</span><div class='caption'>\n\
                                     <p>"+tipoDatos[0].datos[index].titulo+"</p><p><a href='producto_info.html?type="+tipoProd+"&id="+tipoDatos[0].datos[index].id+"' class='btn btn-primary' role='button'>Ver</a></p></div></div></div>");
                             
                         });
@@ -50,6 +51,7 @@ $( document ).ready(function() {
 	    	$.each(tipoDatos[0].datos, function(index, value) {
 	    		if (value.id == idProd) {
                            $('.titulodescripcion').html(value.titulo);
+                           $('head title').html(value.titulo);
                            $('#imagen').attr('src', 'bd/'+tipoProd+'/'+value.imagen);
                            $('#precio').html('PRECIO: '+value.precio);
                            $('#cont').html(value.caracteristicas);
