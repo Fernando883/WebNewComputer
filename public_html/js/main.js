@@ -23,7 +23,7 @@ $( document ).ready(function() {
                             $('#name').html(tipoDatos[0].name);
                             // Agregamos los productos de un determinado tipo
                             contenedor.append("<div class='col-sm-6 col-md-4'><div class='thumbnail'><img src='bd/"+ tipoProd +"/"+tipoDatos[0].datos[index].imagen+"' alt=''><div class='caption'>\n\
-                                    <p>"+tipoDatos[0].datos[index].titulo+"</p><p><a href='productos.html?type="+tipoProd+"&id="+tipoDatos[0].datos[index].id+"' class='btn btn-primary' role='button'>Ver</a></p></div></div></div>");
+                                    <p>"+tipoDatos[0].datos[index].titulo+"</p><p><a href='producto_info.html?type="+tipoProd+"&id="+tipoDatos[0].datos[index].id+"' class='btn btn-primary' role='button'>Ver</a></p></div></div></div>");
                             
                         });
 				
@@ -63,6 +63,45 @@ $( document ).ready(function() {
 			console.log("ERROR");
 		});
 	}
+        
+        // Evento para agregar productos al carrito
+        var cantidad = $('input[name="cantidad"]');
+           $('#comprar').click(function(e) {
+                e.preventDefault();
+                // Solo procesamos si al menos se ha agregado un producto
+                if (cantidad.val() !== "") {
+                    agregarProducto(urlParam('id'), cantidad.val());
+                    cantidad.val("");
+                    $('#compraCorrecta').modal('show');
+                }
+           });
 
 });
+
+function agregarProducto(id, cantidad) {
+    var productosCarro = JSON.parse(sessionStorage.getItem("carrito"));
+    if (productosCarro == null)
+        productosCarro = new Array();
+    
+    var prod = {
+        id: id,
+        cantidad: cantidad
+    };
+    
+    // Buscamos si existe en el carro el mismo producto para incrementar su cantidad
+    encontrado = false;
+    $.each(productosCarro, function(i, value) {
+        if (productosCarro[i].id == prod.id) { // Si se encuentra, se incrementa
+            cant = parseInt(productosCarro[i].cantidad);
+            productosCarro[i].cantidad = cant + parseInt(prod.cantidad);
+            encontrado = true;
+        }
+    });
+        
+    // Si no encontramos el producto en el carro, lo agregamos al final
+    if (!encontrado)
+        productosCarro.push(prod);
+    
+    sessionStorage.setItem("carrito", JSON.stringify(productosCarro));
+}
 
