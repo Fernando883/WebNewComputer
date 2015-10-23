@@ -78,7 +78,7 @@ ul{
 
 #comprar{
     border: 1px black solid;
-    float: right;
+    /* float: right; */
 }
 
 .tamano{

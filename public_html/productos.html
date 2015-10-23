@@ -53,10 +53,18 @@ and open the template in the editor.
                             <div class="col-md-5">
                                 <h2><span id="oferta" class ="label label-warning" style="display: none">OFERTA</span></h2>
                             </div>
-                            <ul style="margin-top: 80px">
-                                <li class="col-md-8"><span class="tamano" id="precio"></span></li>
-                                <li class="col-md-4"><h1><button type = "button"  id="comprar" class="btn btn-danger btn-lg">COMPRAR</button></h1></li>
-                            </ul>                                
+                            <div style="margin-top: 80px">
+                                <div class="col-md-12"><span class="tamano" id="precio"></span></div>
+                                 <div class="col-md-12">
+                                      <form class="form-inline" style="float: right">
+                                        <div class="form-group">
+                                            <label for="cantidad">Cantidad: </label>
+                                            <input class="form-control" type="number" name="cantidad" style="width: 50px"/>
+                                        </div>
+                                        <button type = "submit"  id="comprar" class="btn btn-danger">COMPRAR</button>
+                                     </form>
+                            </div>
+                            </div>                                
                             <p style="margin-top: 170px"><label>Desea una garantía por rotura y daño accidental de 1 año por 25,00 €</label></p>
                             <p><input type="radio" name="repite" value="opcion1" /> No deseo garantía adicional</p>
                             <input type="radio" name="repite" value="opcion2" /> Garantía por rotura y daño accidental 1 año<br /><br />
