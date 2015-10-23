@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/vendor/jquery-1.11.2.js" type="text/javascript"></script>
+        <link href="css/compra.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div id="todo">
+            <div class="cabecera">
+                
+            </div>
+            <script type="text/javascript">
+                $.ajax({
+                    url: 'cabecera.html',
+                    success: function(data){
+                        $(".cabecera").html(data);
+                    }
+                });
+            </script>
+            <div class="col-md-2"></div>
+                <div class="col-md-8 cuerpo">
+                        <div id="datoscompra">
+                        <h2>
+                            <span>Paso 1: </span>Carrito de compra
+                        </h2>
+                        <hr>
+                        <div class="producto col-md-2" style="text-align: center">
+                        <img src="img/99219.file_a.jpg" alt="" width="50px" height="50px"/>
+                        </div>
+                        <div class="producto col-md-4">
+                            PORTATIL HP 15" 512MB
+                        </div>
+                        <div class="precio col-md-2">
+                            500 €
+                        </div>
+                        <div class="precio col-md-1">
+                            X
+                        </div>
+                        <div class="comprar col-md-3">
+                            <input type="number" id="cantidad"/>Unidades
+                        </div><br><br> 
+                        <hr>    
+                        <div class="col-md-offset-9 col-md-3">
+                            Total: <span>500</span> €
+                        </div>    
+                        </div>
+                        <div id="datoscliente">
+                            <h2>
+                            <span>Paso 2: </span>Datos de cliente
+                            </h2>
+                            <hr>
+                            <form>
+                                <label class="col-md-2">Nombre:</label><input type="text" class="col-md-3"/><br><br>
+                                <label class="col-md-2">Email: </label><input type="email" class="col-md-3"/><br><br>
+                                <label class="col-md-2">Teléfono: </label><input type="text" class="col-md-3"/><br><br>
+                                <input type="button" class="col-md-offset-2 col-md-2 naranja" value="Comprar"/>
+                            </form>
+                        </div>
+                        <div id="recepcion">
+                            <p>El pedido de estos artículos lo recibirás en tu tienda
+                                <br>
+                                <span class="tienda">Jaen Bulevar</span>
+                            </p>
+                        </div>
+                </div>
+            <div class="col-md-2"></div>
+        </div>   
+    </body>
+</html>
