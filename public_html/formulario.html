@@ -15,7 +15,6 @@
         <style>
             body {
                 padding-top: 50px;
-                padding-bottom: 20px;
             }
         </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
@@ -42,26 +41,32 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+          <img class="logo" src="img/Logo.png" alt="Logo"/>
           <a class="navbar-brand" href="index.html">New Computer</a>
         </div>
           
           <div class="navbar-header">
+              
               <ul class="nav navbar-nav">
                   <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" >Productos <span class="caret"></span></a>
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Productos <span class="caret"></span></a>
                       <ul class="dropdown-menu">
-                          <li><a href="ProductoX.html">Portátiles</a></li>
-                          <li><a href="ProductoX.html">Smartphones</a></li>
-                          <li><a href="ProductoX.html">Tablets</a></li>
-                          <li><a href="ProductoX.html">Consolas</a></li>
+                          <li><a href="lista_productos.html?type=portatil">Portátiles</a></li>
+                          <li><a href="lista_productos.html?type=movil">Smartphones</a></li>
+                          <li><a href="lista_productos.html?type=tablet">Tablets</a></li>
+                          <li><a href="lista_productos.html?type=consola">Consolas</a></li>
                       </ul>
                   </li>
                  <li><a href="dondeEstamos.html">¿Dónde estamos?</a></li>
                  <li><a href="formulario.html">Trabaja con nosotros</a></li>
-              </ul>
-          </div>   
-         </div>        
-    </nav> 
+              </ul> 
+          </div>
+          <button type="button" class="btn btn-default carrito" aria-label="Left Align">
+            <span class="glyphicon glyphicon-glyphicon glyphicon-shopping-cart carro" aria-hidden="true"></span>
+            <span class="badge compra"></span>
+          </button>
+          </div>        
+    </nav>  
         
     
 

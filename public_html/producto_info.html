@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>ProductoX</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/productoseleccionados.css">
+        
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="js/vendor/jquery-1.11.2.js" type="text/javascript"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/functions.js" type="text/javascript"></script>
+        <script src="js/main.js" type="text/javascript"></script>
+
+        
+    </head>
+    <body>
+        
+     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"  aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img class="logo" src="img/Logo.png" alt="Logo"/>
+                <a class="navbar-brand" href="index.html">New Computer</a>
+            </div>
+            
+            <div class="navbar-header">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Productos <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="lista_productos.html?type=portatil">Portátiles</a></li>
+                            <li><a href="lista_productos.html?type=movil">Smartphones</a></li>
+                            <li><a href="lista_productos.html?type=tablet">Tablets</a></li>
+                            <li><a href="lista_productos.html?type=consola">Consolas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="dondeEstamos.html">¿Dónde estamos?</a></li>
+                    <li><a href="formulario.html">Trabaja con nosotros</a></li>
+                </ul> 
+            </div>
+            <a href="compra.html">
+                <button type="button" class="btn btn-default carrito" aria-label="Left Align">
+                    <span class="glyphicon glyphicon-glyphicon glyphicon-shopping-cart carro" aria-hidden="true"></span>
+                    <span class="badge compra"></span>
+                </button>
+            </a>
+        </div>        
+    </nav>   
+        <div id="contenido">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                
+                <h2 id="titulo" class="titulodescripcion"></h2><br>
+                <section>
+                    <div id="importante">
+                        <div id="imagenes" class="col-md-5">
+                            <figure>
+				<img id="imagen" class="imagenes" style="max-width: 330px; max-height: 330px" src="" alt=""/>
+                            </figure>   
+                        </div>
+                        <div id="datos" class="col-md-offset-1 col-md-6">
+                            <div class="col-md-7">
+                                <h4 class="negrita">Comprar: </h4><div class="titulodescripcion"></div>  
+                            </div>
+                            <div class="col-md-5">
+                                <h2><span id="oferta" class ="label label-warning" style="display: none">OFERTA</span></h2>
+                            </div>
+                            <div style="margin-top: 80px">
+                                <div class="col-md-12"><span class="tamano" id="precio"></span></div>
+                                 <div class="col-md-12">
+                                      <form class="form-inline" style="float: right">
+                                        <div class="form-group">
+                                            <label for="cantidad">Cantidad: </label>
+                                            <input class="form-control" type="number" name="cantidad" style="width: 70px"/>
+                                        </div>
+                                        <button type = "submit"  id="comprar" class="btn btn-danger">COMPRAR</button>
+                                     </form>
+                            </div>
+                            </div>                                
+                            <p style="margin-top: 170px"><label>Desea una garantía por rotura y daño accidental de 1 año por 25,00 €</label></p>
+                            <p><input type="radio" name="repite" value="opcion1" /> No deseo garantía adicional</p>
+                            <input type="radio" name="repite" value="opcion2" /> Garantía por rotura y daño accidental 1 año<br /><br />
+                                
+                        </div>
+                    </div><br><br>
+                    <div id="ficha" class="main row">
+                        <ul  class = "nav nav-pills" > 
+                            <li  role= "presentation"  class= "active" ><a id="caracteristicas"  href= "#" > Características </a></li> 
+                            <li  role= "presentation" ><a  id="video" href= "#" > Videos </a></li> 
+                            <li  role= "presentation" ><a  id="puntuacion" href= "#" > Puntuación </a></li> 
+                        </ul>
+                        <div id="cont">
+                                
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-2"></div>    
+        </div>
+        
+        <div class="modal fade" id="compraCorrecta" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              ¡El producto se ha agregado al carrito!
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-defaul btn-success" data-dismiss="modal">Aceptar</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+</html>
