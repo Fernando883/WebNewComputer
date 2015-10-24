@@ -2,3 +2,5 @@
 #cuadro{margin-top: 140px;}
 #texto{font-size: 25px;}
 
+#listaAccesible{height: 20px;margin-left: 20px;clear:left}
+#listaAccesible li{float: left;height: 50px;list-style: none;}

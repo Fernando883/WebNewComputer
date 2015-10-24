@@ -6,19 +6,21 @@
 
 $(document).ready(function(){
    
-    $.getJSON("provincias.json",function(data){
+    $.getJSON("json/provincias.json",function(data){
         $.each(data.lista.provincia,function(i){
-            $('#provincia').append('<option>'+data.lista.provincia[i].nombre.__cdata+'</option>');
-    });
-    
-     
-     $('#provincia option:selected').change(function(){
+            $('#provincia').append('<option id="'+data.lista.provincia[i]._id+'" >'+data.lista.provincia[i].nombre.__cdata+'</option>');
+        });
         
-           
-         
+            $('#provincia').change(function(){
+
+            var idProvincia = $('#provincia option:selected').attr("id");
+            idProvincia = parseInt(idProvincia-1);
+            $('#localidad').html("");
+            
+            $.each(data.lista.provincia[idProvincia].localidades.localidad,function(j){
+               
+                $('#localidad').append('<option>'+data.lista.provincia[idProvincia].localidades.localidad[j].__cdata+'</option>');
+           });
+        }); 
      });
-     
-     
-    
-    });
 });

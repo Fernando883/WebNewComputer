@@ -23,6 +23,8 @@ function initMap() {
                 infowindow.open(map, marker);
             });
             
+            $("#listaAccesible").append('<li title="'+data[i].direccion+" / Teléfono: "+data[i].telefono+'">'+data[i].name+'&nbsp</li>');
+            
          });
     });
     
