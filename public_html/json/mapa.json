@@ -1,0 +1,41 @@
+[
+    {
+        "name": "Almería",
+        "latitude": 36.838170,
+        "longitude": -2.463377,
+        "direccion":"Paseo de Almería, 38, 04001 Almería",
+        "telefono":"678 22 22 22"
+    },
+    {
+        
+        "name": "Barcelona",
+        "latitude": 41.398739, 
+        "longitude": 2.178120,
+        "direccion":"Carrer de la Diputació, 421, 08013 Barcelona",
+        "telefono":"678 33 33 33"
+    },
+    {
+        
+        "name": "Madrid",
+        "latitude": 40.420203,  
+        "longitude": -3.703752,
+        "direccion":"Calle Gran Vía, 32,28013 Madrid",
+        "telefono":"678 55 55 55"
+    },
+    {
+        
+        "name": "Málaga",
+        "latitude": 36.728037,
+        "longitude": -4.414951,
+        "direccion":"Calle Puerto Parejo, 18, 29013 Málaga",
+        "telefono":"679 11 11 11"
+    },
+    {
+       
+        "name": "Sevilla",
+        "latitude": 37.390242,
+        "longitude": -5.982496,
+        "direccion":"Calle Juan de Vera, 8A, 41003 Sevilla",
+        "telefono":"678 88 88 88"
+    }
+]
