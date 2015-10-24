@@ -15,7 +15,6 @@
         <style>
             body {
                 padding-top: 50px;
-                padding-bottom: 20px;
             }
         </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
@@ -23,6 +22,9 @@
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         <script type="text/javascript" src="js/vendor/jquery-1.11.2.js"></script>
+        <script src="js/StorageFormulario.js" type="text/javascript"></script>
+        <script src="js/provincias.js" type="text/javascript"></script>
+        
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -30,7 +32,41 @@
         <![endif]-->
   
                     
-        <div class="cabecera"></div>  
+         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"  aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <img class="logo" src="img/Logo.png" alt="Logo"/>
+          <a class="navbar-brand" href="index.html">New Computer</a>
+        </div>
+          
+          <div class="navbar-header">
+              
+              <ul class="nav navbar-nav">
+                  <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Productos <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                          <li><a href="lista_productos.html?type=portatil">Portátiles</a></li>
+                          <li><a href="lista_productos.html?type=movil">Smartphones</a></li>
+                          <li><a href="lista_productos.html?type=tablet">Tablets</a></li>
+                          <li><a href="lista_productos.html?type=consola">Consolas</a></li>
+                      </ul>
+                  </li>
+                 <li><a href="dondeEstamos.html">¿Dónde estamos?</a></li>
+                 <li><a href="formulario.html">Trabaja con nosotros</a></li>
+              </ul> 
+          </div>
+          <button type="button" class="btn btn-default carrito" aria-label="Left Align">
+            <span class="glyphicon glyphicon-glyphicon glyphicon-shopping-cart carro" aria-hidden="true"></span>
+            <span class="badge compra"></span>
+          </button>
+          </div>        
+    </nav>  
         
     
 
@@ -55,7 +91,7 @@
                    <div class="form-group">
                        <label for="NIF" class="col-sm-2 control-label">NIF: </label>
                        <div class="col-sm-4">
-                        <input type="text" class="form-control" id="apellidos" name="nif" value placeholder="NIF">
+                        <input type="text" class="form-control" id="nif" name="nif" value placeholder="NIF">
                        </div>
                    </div> 
                    <div class="form-group">
@@ -77,16 +113,18 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="Localidad" class="col-sm-2 control-label">Localidad: </label>
-                        <div class="col-sm-4">
-                            <input type="text" class="form-control"  id="localidad" name="localidad" value placeholder="Localidad">
-                        </div>    
-                    </div>
-                    <div class="form-group">
                         <label for="Provincia" class="col-sm-2 control-label">Provincia: </label>
                         <div class="col-sm-4">
-                           <input type="text" class="form-control" id="provincia" name="provincia" value placeholder="Provincia">
+                            <select class="form-control" id="provincia" name="provincia" value placeholder="Provincia">
+                                <option>Seleccione una provincia...</option>
+                            </select>
                         </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Localidad" class="col-sm-2 control-label">Localidad: </label>
+                        <div class="col-sm-4">
+                            <select class="form-control"  id="localidad" name="localidad" value placeholder="Localidad"></select>
+                        </div>    
                     </div>
                     <div class="form-group">
                         <label for="Teléfono" class="col-sm-2 control-label">Teléfono: </label>
@@ -97,7 +135,7 @@
                     <div class="form-group">
                         <label for="E-mail" class="col-sm-2 control-label">Email: </label>
                         <div class="col-sm-4">
-                          <input type="email" class="form-control" id="e-mail" name="email" value placeholder="E-mail" >
+                          <input type="email" class="form-control" id="email" name="email" value placeholder="E-mail" >
                         </div>
                     </div>    
                     <div class="form-group">
@@ -107,7 +145,7 @@
                     
                     <div class="form-group">
                         <div class="col-sm-offset-2">
-                            <input type="submit" class="btn btn-primary "></button>
+                            <input type="submit" class="btn btn-primary " id="boton"></button>
                         </div>
                     </div>
                                               
@@ -118,20 +156,16 @@
         
         <hr>
         
-     <footer>
+        <footer>
+                
+        Redes sociales/Seguidores 
+        <a href="http://www.facebook.com"><img class="redes" src="img/facebook.png" alt="Facebook"/></a>
+        <a href="https://twitter.com"><img class="redes" src="img/twiter.jpg" alt="Twitter"/></a>
+        <a href="http://www.Youtube.com"><img class="redes" src="img/Youtube.png" alt="Youtube"/></a>
+        <span class="derechos">&copy; Company 2015. Todos los derechos reservados</span>
+        </footer>
         
-        <p id="twitter">Síguenos en Twitter @NewComputer</p>
-        <p>&copy; Company 2015</p>
-      </footer>
         
-        <script>
-            $.ajax({
-                url:'cabecera.html',
-                success:function(data){
-            $('.cabecera').html(data);
-                }
-            }); 
-        </script>
         
      <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
@@ -149,6 +183,8 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
+        
+        
             
         
         
