@@ -12,6 +12,13 @@ $(document).ready(function(){
     });
     
      
+     $('#provincia option:selected').change(function(){
+        
+           
+         
+     });
+     
+     
     
     });
 });

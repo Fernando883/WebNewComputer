@@ -71,10 +71,28 @@ and open the template in the editor.ok
                
     </nav>  
         
-    <div id="map"></div>
+   <div class="container">
+       
+            <div class="col-md-6" id="map">
+                
+            </div>
+       <div class="col-md-offset-1 col-md-4">
+           
+            <div id="cuadro" class="thumbnail">
+                
+                <div class="caption">
+                    <h1>Tu pedido será enviado a tu tienda más cercana</h1>
+                    <p id="texto">¡Búscala en el mapa!</p>
+                    
+                </div>
+            </div>
+       </div>
+   </div>  
+        
     <script src="js/mapa.js" type="text/javascript"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCE2CnSWvdRjGFunWA-VF_UnQf68XVG-58&signed_in=true&libraries=places&callback=initMap" async defer></script>
 
+    
         
         <footer>
                 
