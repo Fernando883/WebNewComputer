@@ -64,6 +64,39 @@ $( document ).ready(function() {
 		});
 	}
         
+        //
+            var cantidad = $('input[name="cantidad"]');
+            //Comprobamos si la session tenia compras para poner el nº en el carro
+            if(sessionStorage.getItem("cesta1") != null){
+                $(".cesta").html(sessionStorage.getItem("cesta1"));
+            }
+           
+            $('#comprar').click(function(e) {
+                e.preventDefault();
+                if (cantidad.val() > 0) {
+                    /*Cuando hemos pulsado en el boton comprar entramos en esta funcion que a
+                      a continuacion si tenemos una bifurcacion dependiendo si la session 
+                      tiene datos porque si no tiene debemos meter en el elemento cesta un
+                      0 porque el valor null no podra ser sumado
+                     */  
+                    if(sessionStorage.getItem("cesta1") == null){
+                        $(".cesta").html("0");
+                        var x = $(".cesta").html();
+                        x = parseInt(x) + parseInt(cantidad.val());
+                        sessionStorage.setItem("cesta1", x);
+                        $(".cesta").html(x);
+                    }else{
+                        $('.cesta').html(sessionStorage.getItem("cesta1"));
+                        var x = $(".cesta").html();
+                        x = parseInt(x) + parseInt(cantidad.val());
+                        sessionStorage.setItem("cesta1", x);
+                        $(".cesta").html(x);
+                    }
+                    
+                }
+            });
+                       
+                  
         // Evento para agregar productos al carrito
         var cantidad = $('input[name="cantidad"]');
            $('#comprar').click(function(e) {
@@ -75,7 +108,8 @@ $( document ).ready(function() {
                     $('#compraCorrecta').modal('show');
                 }
            });
-
+           
+           
 });
 
 function agregarProducto(id, cantidad) {
