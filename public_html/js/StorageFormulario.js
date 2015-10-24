@@ -118,6 +118,16 @@
            
            $('#boton').click(function(){
                localStorage.clear();
+               $('#nombre').val(null);
+               $('#apellidos').val(null);
+               $('#nif').val(null);
+               $('#fecha_nacimiento').val(null);
+               $('#direccion').val(null);
+               $('#cod_postal').val(null);
+               $('#provincia').val(null);
+               $('#localidad').val(null);
+               $('#telefono').val(null);
+               $('#email').val(null);
            });
             
     });  
