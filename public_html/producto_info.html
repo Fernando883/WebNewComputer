@@ -8,7 +8,7 @@ and open the template in the editor.
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>ProductoX</title>
+        <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -17,7 +17,7 @@ and open the template in the editor.
         <style>
             body {
                 padding-top: 50px;
-                padding-bottom: 20px;
+               
             }
         </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
@@ -35,54 +35,50 @@ and open the template in the editor.
     <body>
         
      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"  aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <img class="logo" src="img/Logo.png" alt="Logo"/>
-                <a class="navbar-brand" href="index.html">New Computer</a>
-            </div>
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"  aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <img class="logo" src="img/Logo.png" alt="Logo"/>
+          <a class="navbar-brand" href="index.html">New Computer</a>
+        </div>
+              <ul class="nav navbar-nav">
+                  <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Productos <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                          <li><a href="lista_productos.html?type=portatil">Portátiles</a></li>
+                          <li><a href="lista_productos.html?type=movil">Smartphones</a></li>
+                          <li><a href="lista_productos.html?type=tablet">Tablets</a></li>
+                          <li><a href="lista_productos.html?type=consola">Consolas</a></li>
+                      </ul>
+                  </li>
+                 <li><a href="dondeEstamos.html">¿Dónde estamos?</a></li>
+                 <li><a href="formulario.html">Trabaja con nosotros</a></li>
+             </ul> 
+          
+          <a href="compra.html">
+            <button type="button" class="btn btn-default carrito" aria-label="Left Align">
+                <span class="glyphicon glyphicon-glyphicon glyphicon-shopping-cart carro" aria-hidden="true"></span>
+                <span class="badge compra">4</span>
+            </button>
+          </a>
+               
+    </nav>  
+        <div class="container" id="contenido" style="margin-bottom: 20px">
+            <h2 id="titulo" class="titulodescripcion"></h2><br>
             
-            <div class="navbar-header">
-                <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Productos <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="lista_productos.html?type=portatil">Portátiles</a></li>
-                            <li><a href="lista_productos.html?type=movil">Smartphones</a></li>
-                            <li><a href="lista_productos.html?type=tablet">Tablets</a></li>
-                            <li><a href="lista_productos.html?type=consola">Consolas</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="dondeEstamos.html">¿Dónde estamos?</a></li>
-                    <li><a href="formulario.html">Trabaja con nosotros</a></li>
-                </ul> 
-            </div>
-            <a href="compra.html">
-                <button type="button" class="btn btn-default carrito" aria-label="Left Align">
-                    <span class="glyphicon glyphicon-glyphicon glyphicon-shopping-cart carro" aria-hidden="true"></span>
-                    <span class="badge compra cesta"></span>
-                </button>
-            </a>
-        </div>        
-    </nav>   
-        <div id="contenido">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
-                
-                <h2 id="titulo" class="titulodescripcion"></h2><br>
                 <section>
                     <div id="importante">
-                        <div id="imagenes" class="col-md-5">
+                        <div id="imagenes" class="col-md-offset-1 col-md-5">
                             <figure>
 				<img id="imagen" class="imagenes" style="max-width: 330px; max-height: 330px" src="" alt=""/>
                             </figure>   
                         </div>
-                        <div id="datos" class="col-md-offset-1 col-md-6">
+                        <div id="datos" class="col-md-offset-1 col-md-5">
                             <div class="col-md-7">
                                 <h4 class="negrita">Comprar: </h4><div class="titulodescripcion"></div>  
                             </div>
@@ -107,7 +103,7 @@ and open the template in the editor.
                                 
                         </div>
                     </div><br><br>
-                    <div id="ficha" class="main row">
+                    <div id="ficha" class="main row col-md-10 col-md-offset-1">
                         <ul  class = "nav nav-pills" > 
                             <li  role= "presentation"  class= "active" ><a id="caracteristicas"  href= "#" > Características </a></li> 
                             <li  role= "presentation" ><a  id="video" href= "#" > Videos </a></li> 
@@ -119,15 +115,7 @@ and open the template in the editor.
                     </div>
                 </section>
             </div>
-            <div class="col-md-2"></div>
-            <footer>   
-            Redes sociales/Seguidores 
-                <a href="http://www.facebook.com"><img class="redes" src="img/facebook.png" alt="Facebook"/></a>
-                <a href="https://twitter.com"><img class="redes" src="img/twiter.jpg" alt="Twitter"/></a>
-                <a href="http://www.Youtube.com"><img class="redes" src="img/Youtube.png" alt="Youtube"/></a>
-                <span class="derechos">&copy; Company 2015. Todos los derechos reservados</span>
-            </footer>
-        </div>
+        
         
         <div class="modal fade" id="compraCorrecta" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog modal-sm" role="document">
@@ -142,5 +130,15 @@ and open the template in the editor.
           </div>
         </div>
       </div>
+        
+         <footer>
+                
+        Redes sociales/Seguidores 
+        <a href="http://www.facebook.com"><img class="redes" src="img/facebook.png" alt="Facebook"/></a>
+        <a href="https://twitter.com"><img class="redes" src="img/twiter.jpg" alt="Twitter"/></a>
+        <a href="http://www.Youtube.com"><img class="redes" src="img/Youtube.png" alt="Youtube"/></a>
+        <span class="derechos">&copy; Company 2015. Todos los derechos reservados</span>
+        </footer>
     </body>
+         
 </html>

@@ -9,6 +9,7 @@ and open the template in the editor.
 */
 
 
+
 #titulo{
     text-align: center;
     color:red;
@@ -91,16 +92,20 @@ ul{
 
 #cont{
     border: 1px black solid;
-    /* height: 300px; */
     background: #f8f7f4;
     padding: 15px;
 }
 
-section{
-    margin-bottom: 40px;
+.badge-notify{
+   position:relative;
+   top: -230px;
+   font-size: 2em;
+   left: 230px;
+   background-color: #337ab7;
 }
 
-footer{
-    width: 100%;
-    float: left;
+.product-info p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
