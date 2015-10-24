@@ -17,7 +17,7 @@ and open the template in the editor.
         <style>
             body {
                 padding-top: 50px;
-                padding-bottom: 20px;
+               
             }
         </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
@@ -36,11 +36,19 @@ and open the template in the editor.
         
      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
-          <div class="navbar-header">
-              <a class="navbar-brand" href="index.html">New Computer</a>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"  aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <img class="logo" src="img/Logo.png" alt="Logo"/>
+          <a class="navbar-brand" href="index.html">New Computer</a>
+        </div>
               <ul class="nav navbar-nav">
                   <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Productos <span class="caret"></span></a>
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Productos <span class="caret"></span></a>
                       <ul class="dropdown-menu">
                           <li><a href="lista_productos.html?type=portatil">Portátiles</a></li>
                           <li><a href="lista_productos.html?type=movil">Smartphones</a></li>
@@ -50,13 +58,16 @@ and open the template in the editor.
                   </li>
                  <li><a href="dondeEstamos.html">¿Dónde estamos?</a></li>
                  <li><a href="formulario.html">Trabaja con nosotros</a></li>
-              </ul>
-          </div>
-      
-              
-         </div>
-        
-    </nav>
+             </ul> 
+          
+          <a href="compra.html">
+            <button type="button" class="btn btn-default carrito" aria-label="Left Align">
+                <span class="glyphicon glyphicon-glyphicon glyphicon-shopping-cart carro" aria-hidden="true"></span>
+                <span class="badge compra">4</span>
+            </button>
+          </a>
+               
+    </nav>  
         <div id="contenido">
             <div class="col-md-2"></div>
             <div class="col-md-8">
@@ -107,7 +118,9 @@ and open the template in the editor.
                 </section>
             </div>
             <div class="col-md-2"></div>    
+            
         </div>
+        
         
         <div class="modal fade" id="compraCorrecta" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog modal-sm" role="document">
@@ -122,5 +135,7 @@ and open the template in the editor.
           </div>
         </div>
       </div>
+               
     </body>
+         
 </html>
