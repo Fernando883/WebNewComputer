@@ -103,3 +103,9 @@ ul{
    left: 230px;
    background-color: #337ab7;
 }
+
+.product-info p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

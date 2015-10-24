@@ -4,9 +4,33 @@ $( document ).ready(function() {
 	var idProd = urlParam('id');
         var contenedor = $('#contenedorProductos');
 
+        
+	
+        if (tipoProd == null) {
+            $.getJSON(jsonData, function(data) {
+		var items = [];
+	    	$.each( data, function( key, val ) {
+			    items = val;
+			});
+                        
+                var contenedor = $('#ofertas');
+	    	var tipoDatos = $.grep(items, function (element, index) {
+		    	$.each(element.datos, function(i, value) {
+                           if (value.oferta == 1) {
+                               contenedor.append("<div class='col-sm-6 col-md-4'><div class='thumbnail'><img src='bd/"+ element.type +"/"+value.imagen+"' alt=''><span class='badge badge-notify'>"+value.precio+"</span><div class='caption product-info'>\n\
+                                    <p>"+value.titulo+"</p><p><a href='producto_info.html?type="+element.type+"&id="+value.id+"' class='btn btn-primary' role='button'>Ver</a></p></div></div></div>");
+                            
+                           }
+                               
+                        });
+		});
 
-	// Petición para recuperar todos los productos de un tipo
-	if (idProd == null) {
+		}).fail(function() {
+			console.log("ERROR");
+		});
+        }
+        // Petición para recuperar todos los productos de un tipo
+	else if (idProd == null) {
 	    $.getJSON( jsonData, function( data ) {
 	    	var items = [];
 	    	$.each( data, function( key, val ) {
@@ -23,7 +47,7 @@ $( document ).ready(function() {
                             $('#name').html(tipoDatos[0].name);
                             $('head title').html(tipoDatos[0].name);
                             // Agregamos los productos de un determinado tipo
-                            contenedor.append("<div class='col-sm-6 col-md-4'><div class='thumbnail'><img src='bd/"+ tipoProd +"/"+tipoDatos[0].datos[index].imagen+"' alt=''><span class='badge badge-notify'>"+tipoDatos[0].datos[index].precio+"</span><div class='caption'>\n\
+                            contenedor.append("<div class='col-sm-6 col-md-4'><div class='thumbnail'><img src='bd/"+ tipoProd +"/"+tipoDatos[0].datos[index].imagen+"' alt=''><span class='badge badge-notify'>"+tipoDatos[0].datos[index].precio+"</span><div class='caption product-info'>\n\
                                     <p>"+tipoDatos[0].datos[index].titulo+"</p><p><a href='producto_info.html?type="+tipoProd+"&id="+tipoDatos[0].datos[index].id+"' class='btn btn-primary' role='button'>Ver</a></p></div></div></div>");
                             
                         });
