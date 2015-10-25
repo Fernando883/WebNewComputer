@@ -23,10 +23,12 @@ and open the template in the editor.
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/productoseleccionados.css">
+        <link rel="stylesheet" href="css/plugins/bootstrap-rating.css">
         
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         <script src="js/vendor/jquery-1.11.2.js" type="text/javascript"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/plugins/bootstrap-rating.min.js"></script>
         <script src="js/functions.js" type="text/javascript"></script>
         <script src="js/main.js" type="text/javascript"></script>
 
@@ -109,8 +111,13 @@ and open the template in the editor.
                             <li  role= "presentation" id="2"><a  id="video" href= "#" > Videos </a></li> 
                             <li  role= "presentation" id="3"><a  id="puntuacion" href= "#" > Puntuación </a></li> 
                         </ul>
-                        <div id="cont">
+                        <div id="cont" class="mas-info">
                                 
+                        </div>
+                        <div id="valoracion" class="mas-info" style="display: none">
+                            La valoración por parte de nuestros clientes es:<br /> 
+                            <input type="hidden" class="rating" data-filled="glyphicon glyphicon-star" data-empty="glyphicon glyphicon-star-empty"/>
+                            <span class="badge"></span>
                         </div>
                     </div>
                 </section>

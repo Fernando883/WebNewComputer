@@ -81,6 +81,8 @@ $( document ).ready(function() {
                            $('#cont').html(value.caracteristicas);
                            if (value.oferta == 1)
                                $('#oferta').attr('style', 'display: block');
+                           $("#valoracion input").rating('rate', value.valoracion);
+                           $("#valoracion span.badge").html(value.valoracion);
 	    		}
 	    	});
 	    	
@@ -183,7 +185,24 @@ $( document ).ready(function() {
                $(this).addClass('active');
                
             });
+            
+            // Valoración
+            $("#caracteristicas").click(function(e) {
+               e.preventDefault();
+               $("#cont").css('display', 'block');
+                $("#valoracion").css('display', 'none');
+            });
+            
+            $("#puntuacion").click(function(e) {
+                e.preventDefault();
+                $("#cont").css('display', 'none');
+                
+                $("#valoracion").css('display', 'block');
+                
+                        
+            });
 });
+            
 
 function agregarProducto(id, cantidad) {
     var productosCarro = JSON.parse(sessionStorage.getItem("carrito"));
