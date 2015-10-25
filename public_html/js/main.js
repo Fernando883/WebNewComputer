@@ -179,6 +179,13 @@ $( document ).ready(function() {
                 
                         
             });
+            
+            // Tiendas de destino
+            $.getJSON('json/mapa.json', function(data) {
+               $.each(data, function(index, value) {
+                   $('#tienda_destino').append('<option>'+value.name+', '+ value.direccion+'</option>');
+               });
+            });
 });
             
 

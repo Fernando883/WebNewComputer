@@ -17,14 +17,6 @@ and open the template in the editor.
     margin-right: 10px;
 }
 
-
-
-#datoscliente{
-    position:relative;
-    top:50px;
-    top: 60px;
-}
-
 .margen{
     margin-left: 20px;
 }
@@ -35,8 +27,7 @@ and open the template in the editor.
     font-weight: bold;
 }
 #recepcion{
-    position: relative;
-    top: 150px;
+    margin-top: 50px;
     border: 1px black dashed;
     text-align: center;
     padding: 30px;
