@@ -17,7 +17,7 @@ $( document ).ready(function() {
 	    	var tipoDatos = $.grep(items, function (element, index) {
 		    	$.each(element.datos, function(i, value) {
                            if (value.oferta == 1) {
-                               contenedor.append("<div class='col-sm-6 col-md-4'><div class='thumbnail'><img src='bd/"+ element.type +"/"+value.imagen+"' alt=''><span class='badge badge-notify'>"+value.precio+"</span><div class='caption product-info'>\n\
+                               contenedor.append("<div class='col-sm-6 col-md-4'><div class='thumbnail'><img src='bd/"+ element.type +"/"+value.imagen+"' alt=''><span class='badge badge-notify'>"+value.precio+" €</span><div class='caption product-info'>\n\
                                     <p>"+value.titulo+"</p><p><a href='producto_info.html?type="+element.type+"&id="+value.id+"' class='btn btn-primary' role='button'>Ver</a></p></div></div></div>");
                             
                            }
@@ -47,7 +47,7 @@ $( document ).ready(function() {
                             $('#name').html(tipoDatos[0].name);
                             $('head title').html(tipoDatos[0].name);
                             // Agregamos los productos de un determinado tipo
-                            contenedor.append("<div class='col-sm-6 col-md-4'><div class='thumbnail'><img src='bd/"+ tipoProd +"/"+tipoDatos[0].datos[index].imagen+"' alt=''><span class='badge badge-notify'>"+tipoDatos[0].datos[index].precio+"</span><div class='caption product-info'>\n\
+                            contenedor.append("<div class='col-sm-6 col-md-4'><div class='thumbnail'><img src='bd/"+ tipoProd +"/"+tipoDatos[0].datos[index].imagen+"' alt=''><span class='badge badge-notify'>"+tipoDatos[0].datos[index].precio+" €</span><div class='caption product-info'>\n\
                                     <p>"+tipoDatos[0].datos[index].titulo+"</p><p><a href='producto_info.html?type="+tipoProd+"&id="+tipoDatos[0].datos[index].id+"' class='btn btn-primary' role='button'>Ver</a></p></div></div></div>");
                             
                         });
@@ -77,7 +77,7 @@ $( document ).ready(function() {
                            $('.titulodescripcion').html(value.titulo);
                            $('head title').html(value.titulo);
                            $('#imagen').attr('src', 'bd/'+tipoProd+'/'+value.imagen);
-                           $('#precio').html('PRECIO: '+value.precio);
+                           $('#precio').html('PRECIO: '+value.precio+ ' €');
                            $('#cont').html(value.caracteristicas);
                            if (value.oferta == 1)
                                $('#oferta').attr('style', 'display: block');
