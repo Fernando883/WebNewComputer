@@ -90,7 +90,8 @@ $( document ).ready(function() {
 		});
 	}
         
-        //
+                        
+            
             var cantidad = $('input[name="cantidad"]');
             //Comprobamos si la session tenia compras para poner el nº en el carro
             if(sessionStorage.getItem("cesta1") != null){
@@ -135,7 +136,53 @@ $( document ).ready(function() {
                 }
            });
            
-           
+           // Funcion para relizar dinamicamente la pagina comprar
+            
+            var contenedor2 = $('#productos');
+            var preciototal=0;
+            var x = sessionStorage.carrito== null;
+            if (x){
+                $('#productos').html("");
+            }else{
+               var Carro = JSON.parse(sessionStorage.getItem("carrito"));
+               //console.log(Carro[0].id);}
+               $.each(Carro, function(i, value) {
+                    var idcarro = Carro[i].id;
+                    var cantidad = Carro[i].cantidad;
+                    //console.log(cantidad);
+                    
+                   $.getJSON(jsonData, function(data) {
+                        var items = [];
+                        $.each( data, function( key, val ) {
+                            items = val;
+                        });
+                    
+                    
+                    var tipoDatos = $.grep(items, function (element, index) {
+                        $.each(element.datos, function(i, value) {
+                            if(value.id==idcarro){
+                                //console.log(value.titulo);
+                                contenedor2.append( "<div class='col-md-7'>"+ value.titulo + "</div><div class='col-md-3'>" + cantidad + " unidades</div><div class='col-md-2'>" + value.precio + " </div><br><hr><br>");
+                                //Funcion para realizar calculo de Precio Final
+                                var cuenta = parseInt(cantidad)*parseInt(value.precio);
+                                preciototal = preciototal + cuenta;
+                                $('#precio1').html(preciototal);
+                             }
+                         }
+                         );
+                    });
+                    });
+            }
+            );}
+
+            
+
+            // Funcion para cambiar el boton activo
+            $( "#ficha li" ).click(function(e) {
+               $("#ficha li").removeClass("active");
+               $(this).addClass('active');
+               
+            });
 });
 
 function agregarProducto(id, cantidad) {
@@ -164,4 +211,5 @@ function agregarProducto(id, cantidad) {
     
     sessionStorage.setItem("carrito", JSON.stringify(productosCarro));
 }
+
 
