@@ -33,11 +33,11 @@ $( document ).ready(function() {
 			});
                         
                         $.each(tipoDatos[0].datos, function(index, value) {
-                            $('#name').html(tipoDatos[0].name);
-                            $('head title').html(tipoDatos[0].name);
+                            $('#name').html(value.name);
+                            $('head title').html(value.name);
                             // Agregamos los productos de un determinado tipo
-                            contenedor.append("<div class='col-sm-6 col-md-4'><div class='thumbnail'><img src='bd/"+ tipoProd +"/"+tipoDatos[0].datos[index].imagen+"' alt=''><span class='badge badge-notify'>"+tipoDatos[0].datos[index].precio+" €</span><div class='caption product-info'>\n\
-                                    <p>"+tipoDatos[0].datos[index].titulo+"</p><p><a href='producto_info.html?type="+tipoProd+"&id="+tipoDatos[0].datos[index].id+"' class='btn btn-primary' role='button'>Ver</a></p></div></div></div>");
+                            contenedor.append("<div class='col-sm-6 col-md-4'><div class='thumbnail'><img src='bd/"+ tipoProd +"/"+value.imagen+"' alt=''><span class='badge badge-notify'>"+value.precio+" €</span><div class='caption product-info'>\n\
+                                    <p>"+value.titulo+"</p><p><a href='producto_info.html?type="+tipoProd+"&id="+value.id+"' class='btn btn-primary' role='button'>Ver</a></p></div></div></div>");
                             
                         });
 				
