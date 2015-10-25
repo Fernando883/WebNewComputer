@@ -162,7 +162,7 @@ $( document ).ready(function() {
                         $.each(element.datos, function(i, value) {
                             if(value.id==idcarro){
                                 //console.log(value.titulo);
-                                contenedor2.append( "<div class='col-md-7'>"+ value.titulo + "</div><div class='col-md-3'>" + cantidad + " unidades</div><div class='col-md-2'>" + value.precio + " </div><br><hr><br>");
+                                contenedor2.append( "<div class='col-md-7'>"+ value.titulo + "</div><div class='col-md-3'>" + cantidad + " unidades</div><div class='col-md-2'>" + value.precio + " € </div><br><hr><br>");
                                 //Funcion para realizar calculo de Precio Final
                                 var cuenta = parseInt(cantidad)*parseInt(value.precio);
                                 preciototal = preciototal + cuenta;
