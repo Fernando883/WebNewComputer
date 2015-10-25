@@ -8,13 +8,8 @@ $( document ).ready(function() {
 	
         if (tipoProd == null) {
             $.getJSON(jsonData, function(data) {
-		var items = [];
-	    	$.each( data, function( key, val ) {
-			    items = val;
-			});
-                        
                 var contenedor = $('#ofertas');
-	    	var tipoDatos = $.grep(items, function (element, index) {
+	    	$.grep(data.productos, function (element, index) {
 		    	$.each(element.datos, function(i, value) {
                            if (value.oferta == 1) {
                                contenedor.append("<div class='col-sm-6 col-md-4'><div class='thumbnail'><img src='bd/"+ element.type +"/"+value.imagen+"' alt=''><span class='badge badge-notify'>"+value.precio+" €</span><div class='caption product-info'>\n\
@@ -32,16 +27,10 @@ $( document ).ready(function() {
         // Petición para recuperar todos los productos de un tipo
 	else if (idProd == null) {
 	    $.getJSON( jsonData, function( data ) {
-	    	var items = [];
-	    	$.each( data, function( key, val ) {
-			    items = val;
-			});
-                        
 	    	if (tipoProd != null) {
-		    	var tipoDatos = $.grep(items, function (element, index) {
+		    	var tipoDatos = $.grep(data.productos, function (element, index) {
                             return element.type == tipoProd;
 			});
-                        
                         
                         $.each(tipoDatos[0].datos, function(index, value) {
                             $('#name').html(tipoDatos[0].name);
@@ -62,16 +51,11 @@ $( document ).ready(function() {
 	else if (tipoProd != null && idProd != null) {
 		// Petición para recuperar un producto específico de un tipo
 		$.getJSON(jsonData, function(data) {
-			var items = [];
-	    	$.each( data, function( key, val ) {
-			    items = val;
-			});
 
-	    	var tipoDatos = $.grep(items, function (element, index) {
+	    	var tipoDatos = $.grep(data.productos, function (element, index) {
 		    	return element.type == tipoProd;
 			});
 
-	    	
 	    	$.each(tipoDatos[0].datos, function(index, value) {
 	    		if (value.id == idProd) {
                            $('.titulodescripcion').html(value.titulo);
@@ -154,13 +138,7 @@ $( document ).ready(function() {
                     //console.log(cantidad);
                     
                    $.getJSON(jsonData, function(data) {
-                        var items = [];
-                        $.each( data, function( key, val ) {
-                            items = val;
-                        });
-                    
-                    
-                    var tipoDatos = $.grep(items, function (element, index) {
+                    $.grep(data.productos, function (element, index) {
                         $.each(element.datos, function(i, value) {
                             if(value.id==idcarro){
                                 //console.log(value.titulo);
