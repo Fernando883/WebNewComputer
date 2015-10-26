@@ -14,11 +14,13 @@ and open the template in the editor.
     text-align: center;
     color:red;
     font-weight: bold;
-    margin-top: 40px;
+    margin-top: 79px;
 }
 
 #importante{
+    width: 81%;
     height: 300px;
+    margin: 0 auto;
 }
 
 #imagenes{
