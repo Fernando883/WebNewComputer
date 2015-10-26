@@ -74,7 +74,7 @@ and open the template in the editor.
             <h2 id="titulo" class="titulodescripcion"></h2><br>
             
                 <section>
-                    <div id="importante">
+                    <div class="row" id="importante">
                         <div id="imagenes" class="col-md-offset-1 col-md-5">
                             <figure>
 				<img id="imagen" class="imagenes" style="max-width: 330px; max-height: 330px" src="" alt=""/>
@@ -87,24 +87,20 @@ and open the template in the editor.
                             <div class="col-md-5">
                                 <h2><span id="oferta" class ="label label-warning" style="display: none">OFERTA</span></h2>
                             </div>
-                            <div style="margin-top: 80px">
-                                <div class="col-md-12"><span class="tamano" id="precio"></span></div>
-                                 <div class="col-md-12">
-                                      <form class="form-inline" style="float: right">
+                            
+                                <div class="col-md-12"><span class="tamano" id="precio"></span>
+                                 <form class="form-inline" style="float: right">
                                         <div class="form-group">
                                             <label for="cantidad">Cantidad: </label>
                                             <input class="form-control" type="number" name="cantidad" min="0" style="width: 70px" value="0"/>
                                         </div>
                                         <button type = "submit"  id="comprar" class="btn btn-danger">COMPRAR</button>
                                      </form>
-                            </div>
-                            </div>                                
-                            <p style="margin-top: 200px"><label>Además hasta final de año, regalamos un año extra de garantía.</label></p>
-                            
-                            
+                                    <p style="margin-top: 40px"><label>Además hasta final de año, regalamos un año extra de garantía.</label></p>
+                                </div>
                         </div>
-                    </div><br><br>
-                    <div class="main row col-md-10 col-md-offset-1">
+                    
+                    <div class="main col-md-11" style="margin-top: 30px">
                         <ul  class = "nav nav-pills" id="ficha"> 
                             <li  role= "presentation"  id="1" class= "active" ><a id="caracteristicas"  href= "#" > Características </a></li> 
                             <li  role= "presentation" id="2"><a  id="video" href= "#" > Videos </a></li> 
@@ -119,9 +115,9 @@ and open the template in the editor.
                             <span class="badge"></span>
                         </div>
                     </div>
+                    </div>
                 </section>
             </div>
-        
         
         <div class="modal fade" id="compraCorrecta" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog modal-sm" role="document">
@@ -137,7 +133,8 @@ and open the template in the editor.
         </div>
       </div>
         
-         <footer>
+        
+         <footer class="footer">
                 
         Redes sociales/Seguidores 
         <a href="http://www.facebook.com"><img class="redes" src="img/facebook.png" alt="Facebook"/></a>
@@ -145,6 +142,7 @@ and open the template in the editor.
         <a href="http://www.Youtube.com"><img class="redes" src="img/Youtube.png" alt="Youtube"/></a>
         <span class="derechos">&copy; Company 2015. Todos los derechos reservados</span>
         </footer>
+        
     </body>
          
 </html>
