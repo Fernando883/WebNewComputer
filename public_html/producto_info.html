@@ -52,10 +52,10 @@ and open the template in the editor.
                   <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Productos <span class="caret"></span></a>
                       <ul class="dropdown-menu">
-                          <li><a href="lista_productos.html?type=portatil">Portátiles</a></li>
-                          <li><a href="lista_productos.html?type=movil">Smartphones</a></li>
-                          <li><a href="lista_productos.html?type=tablet">Tablets</a></li>
-                          <li><a href="lista_productos.html?type=consola">Consolas</a></li>
+                          <li><a href="lista_productos.html?type=portatil" title="Portátiles">Portátiles</a></li>
+                          <li><a href="lista_productos.html?type=movil" title="Smartphones">Smartphones</a></li>
+                          <li><a href="lista_productos.html?type=tablet" title="Tablets">Tablets</a></li>
+                          <li><a href="lista_productos.html?type=consola" title="Consolas" >Consolas</a></li>
                       </ul>
                   </li>
                  <li><a href="dondeEstamos.html">¿Dónde estamos?</a></li>
@@ -93,16 +93,15 @@ and open the template in the editor.
                                       <form class="form-inline" style="float: right">
                                         <div class="form-group">
                                             <label for="cantidad">Cantidad: </label>
-                                            <input class="form-control" type="number" name="cantidad" min="0" style="width: 70px"/>
+                                            <input class="form-control" type="number" name="cantidad" min="0" style="width: 70px" value="0"/>
                                         </div>
                                         <button type = "submit"  id="comprar" class="btn btn-danger">COMPRAR</button>
                                      </form>
                             </div>
                             </div>                                
-                            <p style="margin-top: 170px"><label>Desea una garantía por rotura y daño accidental de 1 año por 25,00 €</label></p>
-                            <p><input type="radio" name="repite" value="opcion1" /> No deseo garantía adicional</p>
-                            <input type="radio" name="repite" value="opcion2" /> Garantía por rotura y daño accidental 1 año<br /><br />
-                                
+                            <p style="margin-top: 200px"><label>Además hasta final de año, regalamos un año extra de garantía.</label></p>
+                            
+                            
                         </div>
                     </div><br><br>
                     <div class="main row col-md-10 col-md-offset-1">

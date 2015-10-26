@@ -116,7 +116,7 @@
                 
            });
            
-           $('#boton').click(function(){
+           $('#boton').submit(function(){
                localStorage.clear();
                $('#nombre').val(null);
                $('#apellidos').val(null);

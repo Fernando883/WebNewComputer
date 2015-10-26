@@ -50,10 +50,10 @@ and open the template in the editor.
                   <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Productos <span class="caret"></span></a>
                       <ul class="dropdown-menu">
-                          <li><a href="lista_productos.html?type=portatil">Portátiles</a></li>
-                          <li><a href="lista_productos.html?type=movil">Smartphones</a></li>
-                          <li><a href="lista_productos.html?type=tablet">Tablets</a></li>
-                          <li><a href="lista_productos.html?type=consola">Consolas</a></li>
+                          <li><a href="lista_productos.html?type=portatil" title="Portátiles">Portátiles</a></li>
+                          <li><a href="lista_productos.html?type=movil" title="Smartphones">Smartphones</a></li>
+                          <li><a href="lista_productos.html?type=tablet" title="Tablets">Tablets</a></li>
+                          <li><a href="lista_productos.html?type=consola" title="Consolas" >Consolas</a></li>
                       </ul>
                   </li>
                  <li><a href="dondeEstamos.html">¿Dónde estamos?</a></li>
@@ -76,47 +76,47 @@ and open the template in the editor.
                 Envíanos tu curriculum
             </h2>
              
-                <form  class="form-horizontal" action="mailto:newcomputer@nc.com" >
+                <form  class="form-horizontal" action="mailto:newcomputer@nc.com"  method="post" enctype="multipart/form-data" >
                    <div class="form-group">
                        <label for="Nombre" class="col-sm-2 control-label">Nombre: </label>
                        <div class="col-sm-4">
-                            <input type="text" class="form-control"  id="nombre" name="nombre" value placeholder="Nombre">
+                            <input type="text" class="form-control"  id="nombre" name="nombre" value placeholder="Nombre" required>
                        </div>
                    </div>
                    <div class="form-group">
                        <label for="Apellidos" class="col-sm-2 control-label">Apellidos: </label>
                        <div class="col-sm-4">
-                        <input type="text" class="form-control" id="apellidos" name="apellidos" value placeholder="Apellidos">
+                        <input type="text" class="form-control" id="apellidos" name="apellidos" value placeholder="Apellidos" required>
                        </div>
                    </div>
                    <div class="form-group">
                        <label for="NIF" class="col-sm-2 control-label">NIF: </label>
                        <div class="col-sm-4">
-                        <input type="text" class="form-control" id="nif" name="nif" value placeholder="NIF">
+                        <input type="text" class="form-control" id="nif" name="nif" value placeholder="NIF" required>
                        </div>
                    </div> 
                    <div class="form-group">
                        <label for="Fecha de Nacimiento" class="col-sm-2 control-label">Fecha de Nacimiento: </label>
                        <div class="col-sm-4">
-                            <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_naciemiento">
+                            <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_naciemiento" required>
                        </div>     
                    </div> 
                    <div class="form-group">
                        <label for="Dirección" class="col-sm-2 control-label">Dirección: </label>
                        <div class="col-sm-4">
-                           <input type=text" class="form-control" id="direccion" name="direccion" value placeholder="Dirección" >
+                           <input type=text" class="form-control" id="direccion" name="direccion" value placeholder="Dirección" required >
                        </div>
                     </div>   
                     <div class="form-group">
                         <label for="Código Postal" class="col-sm-2 control-label">Código Postal: </label>
                         <div class="col-sm-4">
-                           <input type="text" class="form-control" id="cod_postal" name="cod_postal" value placeholder="Código Postal">
+                           <input type="text" class="form-control" id="cod_postal" name="cod_postal" value placeholder="Código Postal" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="Provincia" class="col-sm-2 control-label">Provincia: </label>
                         <div class="col-sm-4">
-                            <select class="form-control" id="provincia" name="provincia" value placeholder="Provincia">
+                            <select class="form-control" id="provincia" name="provincia" value placeholder="Provincia" required>
                                 <option>Seleccione una provincia...</option>
                             </select>
                         </div>
@@ -124,24 +124,24 @@ and open the template in the editor.
                     <div class="form-group">
                         <label for="Localidad" class="col-sm-2 control-label">Localidad: </label>
                         <div class="col-sm-4">
-                            <select class="form-control"  id="localidad" name="localidad" value placeholder="Localidad"></select>
+                            <select class="form-control"  id="localidad" name="localidad" value placeholder="Localidad" required></select>
                         </div>    
                     </div>
                     <div class="form-group">
                         <label for="Teléfono" class="col-sm-2 control-label">Teléfono: </label>
                         <div class="col-sm-4">
-                          <input type="text" class="form-control" id="telefono" name="telefono" value placeholder="Telefono">
+                          <input type="text" class="form-control" id="telefono" name="telefono" value placeholder="Telefono" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="E-mail" class="col-sm-2 control-label">Email: </label>
                         <div class="col-sm-4">
-                          <input type="email" class="form-control" id="email" name="email" value placeholder="E-mail" >
+                          <input type="email" class="form-control" id="email" name="email" value placeholder="E-mail" required>
                         </div>
                     </div>    
                     <div class="form-group">
                         <label for="Curriculum Vitae" class="col-sm-2 control-label">CV: </label>
-                          <input type="file" id="curriculum" name="curriculum">
+                          <input type="file" id="curriculum" name="curriculum" required>
                     </div>
                     
                     <div class="form-group">

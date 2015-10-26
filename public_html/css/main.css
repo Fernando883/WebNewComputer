@@ -14,7 +14,7 @@
 .carrito{
     float:right;
     width: 80px;
-    height: 50px;
+    height: 48px;
 }
 
 .carro{
@@ -64,5 +64,17 @@ footer{
 .derechos{
     float:right;
     margin-top: 7px;
+}
+
+
+@media screen and (max-width: 767px){
+    .caja-registro{margin-top: 244px;}
+    #contenedorProductos{margin-top: 201px;}
+    .form-horizontal{width: 80%;margin-left: 10%;}
+    .badge-notify {position: relative;top: -230px;font-size: 2em;left: 80%;background-color: #337ab7;}
+    #map {margin-top: 200px!important;height: 500px;width: 95vw;margin-left: 0px;margin-top: 0px;margin-bottom: 0px;}
+    #contenido{margin-top:240px;}
+    #contenido #imagenes{margin: 0 auto;}
+    .jumbotron {margin-top: 229px;}
 }
 
